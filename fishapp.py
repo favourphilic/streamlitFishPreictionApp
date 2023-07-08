@@ -2,9 +2,6 @@ import streamlit as st
 import joblib 
 import numpy as np
 
-st.header("Fish Weight Prediction")
-
-
 model=joblib.load(open('my_model.joblib', 'rb'))
 #(#open('fishwt_predmodel.pkl','rb'))
 #lets create a fucntion for prediction
@@ -19,7 +16,7 @@ model=joblib.load(open('my_model.joblib', 'rb'))
 
 
 def main():
-    st.title("Fish Weight Prediction Web App")
+    st.header(":fish: Fish Weight Prediction Web App")
     Length1 = st.text_input("Length1")
     Length2 = st.text_input("Length2")
     Length3 = st.text_input("Length3")
